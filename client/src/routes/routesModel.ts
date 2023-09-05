@@ -1,13 +1,14 @@
 const ROUTES = {
     HOME: '/',
     TRIPS: '/trips',
+    TRIP_DETAILS: '/trip/:id',
     LOGIN: '/login',
     REGISTER: '/register',
     PROFILE: '/profile',
     ADMIN: '/admin',
     MODERATOR: '/mod',
     CREATE: '/create',
-    UPDATE: '/update/:id',
+    UPDATE: '/trip/update/:id',
     DELETE: '/delete/:id',
     DETAILS: '/details/:id',
     SEARCH: '/search',
@@ -17,7 +18,8 @@ const ROUTES = {
     FORBIDDEN: '/403',
     UNAUTHORIZED: '/401',
     REDIRECT: '/redirect',
-    REDIRECT_TO: '/redirect/:url'
+    REDIRECT_TO: '/redirect/:url',
+    DEFAULT: '*'
 };
 
 export default ROUTES;

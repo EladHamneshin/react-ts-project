@@ -5,4 +5,7 @@ export default interface Trip {
     startDate: string,
     endDate: string,
     image: string
+    activities?: string[],
+    description?: string,
+    price?: number
 };
