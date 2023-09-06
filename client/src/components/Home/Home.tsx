@@ -1,5 +1,5 @@
-import NavBarLink from '../routes/NavBarLink'
-import ROUTES from '../routes/routesModel'
+import NavBarLink from '../../routes/NavBarLink'
+import ROUTES from '../../routes/routesModel'
 
 type Props = {}
 

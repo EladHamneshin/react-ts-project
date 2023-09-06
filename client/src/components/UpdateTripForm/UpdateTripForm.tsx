@@ -1,13 +1,15 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import Trip from '../models/Trip'
-import { getTrip, updateTrip } from '../services/tripService'
+import Trip from '../../models/Trip'
+import { getTrip, updateTrip } from '../../services/tripService'
 import { SubmitHandler, useForm } from 'react-hook-form'
+import { useNavigate } from 'react-router-dom'
 
 export default function UpdateTripForm() {
+  const navigate = useNavigate()
   const { id } = useParams()
   const form = useForm<Trip>()
-  const onSubmit: SubmitHandler<Trip> = (trip) => updateTrip(trip).then((trip) => console.log(trip)).catch((err) => console.log(err.message))
+  const onSubmit: SubmitHandler<Trip> = (trip) => updateTrip(trip).then(() => navigate(-1)).catch((err) => console.log(err.message))
 
   React.useEffect(() => {
     if (!id) return

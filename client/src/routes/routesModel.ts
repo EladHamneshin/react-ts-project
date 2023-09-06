@@ -6,8 +6,6 @@ const ROUTES = {
     REGISTER: '/register',
     CREATE: 'trip/create',
     UPDATE: '/trip/update/:id',
-    SEARCH: '/search',
-    SEARCH_RESULT: '/search/:query',
     NOT_FOUND: '/404',
     SERVER_ERROR: '/500',
     FORBIDDEN: '/403',

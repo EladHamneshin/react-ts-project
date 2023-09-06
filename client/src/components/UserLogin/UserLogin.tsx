@@ -1,13 +1,12 @@
-import { SubmitHandler, useForm } from 'react-hook-form'
-import User from '../models/User'
-import { registerUser } from '../services/userService'
+import { SubmitHandler, useForm } from "react-hook-form"
+import User from "../../models/User"
+import { loginUser } from "../../services/userService"
 
 type Props = {}
 
-export default function UserRegistration({}: Props) {
+export default function UserLogin({}: Props) {
   const { register, handleSubmit } = useForm<User>()
-  const onSubmit: SubmitHandler<User> = (user) => registerUser(user).then((user) => console.log(user)).catch((err) => console.log(err.message))
-
+  const onSubmit: SubmitHandler<User> = (user) => loginUser(user).then((user) => console.log(user)).catch((err) => console.log(err.message))
 
   return (
     <div>
