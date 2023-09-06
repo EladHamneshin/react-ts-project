@@ -1,40 +1,28 @@
-import axios from "axios";
 import Trip from "../models/Trip";
+import { axiosInstance as axios } from "../utils/axiosUtils";
 
-const API_URL = 'http://localhost:3000/api';
-const TOKEN = 'test-token'
 
 export async function getTrips(): Promise<Trip[]> {
-    return (await axios.get<Trip[]>(`${API_URL}/trips`)).data;
+    const response = await axios.get<Trip[]>(`/trips`)
+    return response.data;
 }
 
 export async function getTrip(id: string): Promise<Trip> {
-    return (await axios.get<Trip>(`${API_URL}/trips/${id}`)).data;
+    const response =await axios.get<Trip>(`/trips/${id}`)
+    return response.data;
 }
 
 export async function updateTrip(trip: Trip): Promise<Trip> {
-    return (await axios.put<Trip>(`${API_URL}/trips/${trip.id}`, trip, 
-    {
-        headers: {
-          Authorization : TOKEN
-          }
-    })).data;
+    const response = await axios.put<Trip>(`/trips/${trip.id}`, trip);
+    return response.data;
 }
 
 export async function deleteTrip(id: string) {
-    return (await axios.delete<Trip>(`${API_URL}/trips/${id}`,
-    {
-        headers: {
-          Authorization : TOKEN
-          }
-    })).data;
+    const response =  await axios.delete<Trip>(`/trips/${id}`)
+    return response.data;
 }
 
 export async function createTrip(trip: Trip): Promise<Trip> {
-    return (await axios.post<Trip>(`${API_URL}/trips`, trip, 
-    {
-        headers: {
-          Authorization : TOKEN
-          }
-    })).data;
+    const response = await axios.post<Trip>(`/trips`, trip)
+    return response.data;
 }

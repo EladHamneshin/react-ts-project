@@ -1,4 +1,4 @@
-:root {
+/* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -68,31 +68,4 @@ button:focus-visible {
   }
 }
 
-.trip-card{
-  margin: 10px;
-  border: 1px solid #888;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #888;
-}
-
-.trip-detail-root {
-  /* Sizing */
-  width: 100vw;
-  height: 100vh;
-  
-  /* Flexbox stuff */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  
-  /* Text styles */
-  text-align: center;
-  color: white;
-  
-  /* Background styles */
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
+ */

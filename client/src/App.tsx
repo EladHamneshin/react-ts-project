@@ -6,9 +6,9 @@ import Router from './routes/Router';
 function App() {
 
   // push test-token in local storage
-  // useEffect(() => {
-  //   localStorage.setItem('test-token', 'test-token')
-  // }, [])
+   useEffect(() => {
+     localStorage.setItem('token', 'test-token')
+  }, [])
 
 
   return (

@@ -1,11 +1,12 @@
 import React from 'react'
-import { getTrip } from '../services/tripService'
-import Trip from '../models/Trip'
+import { getTrip } from '../../services/tripService'
+import Trip from '../../models/Trip'
 import { useParams } from 'react-router-dom'
+import './TripDetails.css'
 
 type Props = {}
 
-export default function TripDetail({}: Props) {
+export default function TripDetails({}: Props) {
 
   const { id } = useParams()
   const [trip, setTrip] = React.useState<Trip | null>(null)

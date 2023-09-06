@@ -1,8 +1,9 @@
 import { useState } from 'react'
-import {getTrips} from '../services/tripService.ts'
-import Trip from '../models/Trip.ts';
-import TripCard from './TripCard.tsx';
-import NavBarLink from '../routes/NavBarLink.tsx';
+import {getTrips} from '../../services/tripService.ts'
+import Trip from '../../models/Trip.ts';
+import TripCard from '../TripCard/TripCard.tsx';
+import NavBarLink from '../../routes/NavBarLink.tsx';
+import './Trips.css'
 
 type Props = {}
 

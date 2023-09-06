@@ -1,20 +1,19 @@
-import axios from "axios";
+import { axiosInstance as axios } from "../utils/axiosUtils";
 import User from "../models/User";
 
-const API_URL = 'http://localhost:3000/api';
-const TOKEN = 'test-token';
+
 
 export async function registerUser(user: User): Promise<User> {
     //axios.defaults.withCredentials = true; TODO
-    const response = await axios.post(`${API_URL}/auth/register`, user, {
-        headers: {
-            Authorization: TOKEN}
-    });
+    const response = await axios.post(`/auth/register`, user);
     return response.data;
 }
 
 export async function loginUser(user: User): Promise<User> {
     //axios.defaults.withCredentials = true; TODO
-    const response = await axios.post(`${API_URL}/auth/login`, user);
+    const response = await axios.post(`/auth/login`, user);
+    const token = response.data.authToken;
+    localStorage.setItem('token', token);
+    axios.defaults.headers.common['Authorization'] = localStorage.getItem('token');
     return response.data;
 }

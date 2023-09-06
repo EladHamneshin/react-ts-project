@@ -1,6 +1,7 @@
-import NavBarLink from '../routes/NavBarLink';
-import Trip from '../models/Trip'
-import { deleteTrip } from '../services/tripService';
+import NavBarLink from '../../routes/NavBarLink';
+import Trip from '../../models/Trip'
+import { deleteTrip } from '../../services/tripService';
+import './TripCard.css'
 
 type Props = {trip: Trip}
 

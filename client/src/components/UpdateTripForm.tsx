@@ -4,9 +4,7 @@ import Trip from '../models/Trip'
 import { getTrip, updateTrip } from '../services/tripService'
 import { SubmitHandler, useForm } from 'react-hook-form'
 
-type Props = {}
-
-export default function UpdateTripForm(props: Props) {
+export default function UpdateTripForm() {
   const { id } = useParams()
   const form = useForm<Trip>()
   const onSubmit: SubmitHandler<Trip> = (trip) => updateTrip(trip).then((trip) => console.log(trip)).catch((err) => console.log(err.message))

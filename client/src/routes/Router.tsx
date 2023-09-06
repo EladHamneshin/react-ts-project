@@ -1,10 +1,10 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "../components/Home";
-import Trips from "../components/Trips";
+import Trips from "../components/Trips/Trips";
 import UserLogin from "../components/UserLogin";
 import UserRegistration from "../components/UserRegistration";
 import ROUTES from "./routesModel";
-import TripDetail from "../components/TripDetail";
+import TripDetails from "../components/TripDetails/TripDetails";
 import UpdateTripForm from "../components/UpdateTripForm";
 import NewTripForm from "../components/NewTripForm";
 
@@ -15,7 +15,7 @@ const Router = () => {
             <Route path={ROUTES.LOGIN} element={<UserLogin />} />
             <Route path={ROUTES.REGISTER} element={<UserRegistration />} />
             <Route path={ROUTES.TRIPS} element={<Trips />} />
-            <Route path={ROUTES.TRIP_DETAILS} element={<TripDetail/>} />
+            <Route path={ROUTES.TRIP_DETAILS} element={<TripDetails/>} />
             <Route path={ROUTES.UPDATE} element={<UpdateTripForm/>} />
             <Route path={ROUTES.CREATE} element={<NewTripForm/>} />
             <Route path={ROUTES.DEFAULT} element={<h1>404 Not Found</h1>} />
