@@ -1,6 +1,6 @@
 import React from 'react'
 import { getTrip } from '../services/tripService'
-import Trip from '../types/Trip'
+import Trip from '../models/Trip'
 import { useParams } from 'react-router-dom'
 
 type Props = {}

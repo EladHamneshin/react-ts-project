@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import {getTrips} from '../services/tripService.ts'
-import Trip from '../types/Trip.ts';
+import Trip from '../models/Trip.ts';
 import TripCard from './TripCard.tsx';
 
 type Props = {}

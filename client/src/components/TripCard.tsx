@@ -1,5 +1,6 @@
 import NavBarLink from '../routes/NavBarLink';
-import Trip from '../types/Trip'
+import Trip from '../models/Trip'
+import { deleteTrip } from '../services/tripService';
 
 type Props = {trip: Trip}
 
@@ -18,6 +19,7 @@ export default function TripCard(props: Props) {
     <NavBarLink to={`/trip/update/${props.trip.id}`}>
         <button >edit</button>
     </NavBarLink>
+    <button onClick={()=>{deleteTrip(props.trip.id).then(()=>{window.location.reload()})}} >delete</button>
     </div>
   )
 }

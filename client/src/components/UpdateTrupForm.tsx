@@ -1,6 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import Trip from '../types/Trip'
+import Trip from '../models/Trip'
 import { getTrip, updateTrip } from '../services/tripService'
 import { SubmitHandler, useForm } from 'react-hook-form'
 
