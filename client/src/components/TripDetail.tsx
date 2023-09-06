@@ -14,7 +14,7 @@ export default function TripDetail({}: Props) {
     if (!id) return
     getTrip(id).then((trip) => {
       setTrip(trip)
-    })
+    }).catch((err) => console.log(err.message))
   }, [id])
 
   if (!trip) return <div>loading...</div>

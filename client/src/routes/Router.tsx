@@ -5,7 +5,8 @@ import UserLogin from "../components/UserLogin";
 import UserRegistration from "../components/UserRegistration";
 import ROUTES from "./routesModel";
 import TripDetail from "../components/TripDetail";
-import UpdateTrupForm from "../components/UpdateTrupForm";
+import UpdateTripForm from "../components/UpdateTripForm";
+import NewTripForm from "../components/NewTripForm";
 
 const Router = () => {
     return (
@@ -15,7 +16,8 @@ const Router = () => {
             <Route path={ROUTES.REGISTER} element={<UserRegistration />} />
             <Route path={ROUTES.TRIPS} element={<Trips />} />
             <Route path={ROUTES.TRIP_DETAILS} element={<TripDetail/>} />
-            <Route path={ROUTES.UPDATE} element={<UpdateTrupForm/>} />
+            <Route path={ROUTES.UPDATE} element={<UpdateTripForm/>} />
+            <Route path={ROUTES.CREATE} element={<NewTripForm/>} />
             <Route path={ROUTES.DEFAULT} element={<h1>404 Not Found</h1>} />
         </Routes>
     );

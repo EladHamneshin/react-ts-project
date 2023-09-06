@@ -19,7 +19,8 @@ export default function TripCard(props: Props) {
     <NavBarLink to={`/trip/update/${props.trip.id}`}>
         <button >edit</button>
     </NavBarLink>
-    <button onClick={()=>{deleteTrip(props.trip.id).then(()=>{window.location.reload()})}} >delete</button>
+    <button onClick={()=>{deleteTrip(props.trip.id).then(()=>{window.location.reload()})
+  .catch((error)=> console.log(error.message))}} >delete</button>
     </div>
   )
 }

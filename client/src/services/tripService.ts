@@ -29,3 +29,12 @@ export async function deleteTrip(id: string) {
           }
     })).data;
 }
+
+export async function createTrip(trip: Trip): Promise<Trip> {
+    return (await axios.post<Trip>(`${API_URL}/trips`, trip, 
+    {
+        headers: {
+          Authorization : TOKEN
+          }
+    })).data;
+}
