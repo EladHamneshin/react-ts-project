@@ -1,4 +1,4 @@
-import React from "react";
+import "./Signup.css";
 
 type Props = {};
 
