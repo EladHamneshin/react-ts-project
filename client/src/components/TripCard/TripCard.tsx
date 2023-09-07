@@ -7,14 +7,12 @@ type Props = {trip: Trip}
 
 export default function TripCard(props: Props) {
   return (
-    <div className='trip-card-root'>
+    <div className='trip-card'>
     <NavBarLink to={`/trip/${props.trip.id}`}>
-        <div className='trip-card'>
-            <img  src={props.trip.image} alt={props.trip.name} />
-            <p>{props.trip.name}</p>
-            <p>{props.trip.destination}</p>
-            <p>{`from ${props.trip.startDate} to ${props.trip.endDate}`}</p>
-        </div>
+      <img  src={props.trip.image} alt={props.trip.name} />
+      <p>{props.trip.name}</p>
+      <p>{props.trip.destination}</p>
+      <p>{`from ${props.trip.startDate} to ${props.trip.endDate}`}</p>
     </NavBarLink>
 
     <NavBarLink to={`/trip/update/${props.trip.id}`}>

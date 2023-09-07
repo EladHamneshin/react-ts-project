@@ -2,12 +2,14 @@ import './Signin.css'
 import { SubmitHandler, useForm } from "react-hook-form"
 import User from "../../models/User"
 import { loginUser } from "../../services/userService"
+import { useNavigate } from 'react-router-dom';
 
 type Props = {};
 
 export default function SignIn({}: Props) {
+  const navigate = useNavigate()
   const { register, handleSubmit } = useForm<User>()
-  const onSubmit: SubmitHandler<User> = (user) => loginUser(user).then((user) => console.log(user)).catch((err) => console.log(err.message))
+  const onSubmit: SubmitHandler<User> = (user) => loginUser(user).then(() => navigate("/")).catch((err) => console.log(err.message))
 
   
   return <div className="form-container sign-in-container">
