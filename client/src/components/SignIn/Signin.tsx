@@ -1,21 +1,28 @@
-import './SignIn.css'
+import './Signin.css'
+import { SubmitHandler, useForm } from "react-hook-form"
+import User from "../../models/User"
+import { loginUser } from "../../services/userService"
 
 type Props = {};
 
 export default function SignIn({}: Props) {
+  const { register, handleSubmit } = useForm<User>()
+  const onSubmit: SubmitHandler<User> = (user) => loginUser(user).then((user) => console.log(user)).catch((err) => console.log(err.message))
+
+  
   return <div className="form-container sign-in-container">
-  <form action="#">
+  <form action="#" onSubmit={handleSubmit(onSubmit)}>
       <h1>Sign in</h1>
       <div className="social-container">
-          <a href="#" className="social"><i className="fab fa-facebook-f"></i></a>
-          <a href="#" className="social"><i className="fab fa-google-plus-g"></i></a>
-          <a href="#" className="social"><i className="fab fa-linkedin-in"></i></a>
+          <a href="#" className="social"><i className="fa fa-github"></i></a>
+          <a href="#" className="social"><i className="fa fa-google"></i></a>
+          <a href="#" className="social"><i className="fa fa-linkedin"></i></a>
       </div>
       <span>or use your account</span>
-      <input type="email" placeholder="Email" />
-      <input type="password" placeholder="Password" />
+      <input type="email" placeholder="Email" {...register("email") }/>
+      <input type="password" placeholder="Password" {...register("password")}/>
       <a href="#">Forgot your password?</a>
-      <button>Sign In</button>
+      <button type='submit'>Sign In</button>
   </form>
 </div>;
 }

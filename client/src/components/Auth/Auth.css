@@ -1,21 +1,4 @@
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
-
-* {
-	box-sizing: border-box;
-}
-
-body {
-	background: #f6f5f7;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	font-family: 'Montserrat', sans-serif;
-	height: 100vh;
-	margin: -20px 0 50px;
-}
-
 h1 {
 	font-weight: bold;
 	margin: 0;
@@ -89,6 +72,10 @@ input {
 	width: 100%;
 }
 
+i{
+	font-size: 25px;
+}
+
 .container {
 	background-color: #fff;
 	border-radius: 10px;
@@ -99,6 +86,7 @@ input {
 	width: 768px;
 	max-width: 100%;
 	min-height: 480px;
+	justify-self: center;
 }
 
 .form-container {
